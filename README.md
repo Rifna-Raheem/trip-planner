@@ -102,24 +102,3 @@ trip_planner/
 
 This project is open-source under the MIT License.
 
-
----
-
-## **3️⃣ Collaboration: How to Show Your Team**
-- ✅ **GitHub README:** The **Team Members** section is the formal way (you don’t need to do more, recruiters check README).  
-- ✅ **GitHub Repo "About" Section:** Just add a short description of the project (not required to list teammates here).  
-- ✅ **LinkedIn Post:** LinkedIn lets you “Add collaborators.” You can **tag your teammate** so it appears for both of you. That’s the best and most professional approach.  
-
-👉 You don’t need to formally add collaborators in GitHub unless you want both of you to push code to the repo. For portfolio purposes, **listing names in README + tagging on LinkedIn is enough and formal**.  
-
----
-
-⚡ So, next steps for you:
-1. Create `README.md` in VS Code → paste the above content.  
-2. Replace `[Your Full Name]` and `[Friend’s Full Name]`.  
-3. Run the Git commands I gave you earlier to push the project.  
-4. On LinkedIn, make your post and tag your friend as collaborator.  
-
----
-
-Do you want me to also **write the LinkedIn post again, but this time mentioning collaboration/teamwork** so you can just copy-paste it?
