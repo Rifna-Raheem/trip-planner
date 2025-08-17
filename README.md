@@ -13,8 +13,8 @@ This project was developed as a **team collaboration**.
 ---
 
 ## 👥 Team Members
-- **Raheem [Your Full Name]**  
-- **[Friend’s Full Name]**
+- **[Rifna Raheem]**  
+- **[Bhagya Rajapaksha]**
 
 ---
 
