@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detailed Trip Suggestion</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #eef2f7;
+      padding: 30px;
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background: white;
+      padding: 25px;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .section h2 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #2d98da;
+      padding: 12px 20px;
+      color: white;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s ease;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #2270b0;
+    }
+
+    /* Button container at bottom */
+    .buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px; /* Space between buttons */
+    }
+
+    /* ATTRACTIONS GRID */
+    .attr-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-start;
+    }
+
+    .attr-item {
+      flex: 1 1 250px;
+      max-width: 260px;
+      text-align: center;
+    }
+
+    .attr-item img {
+      width: 100%;
+      height: 200px; /* Increased size */
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .attr-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .attr-item div {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .feedback p {
+      background: #f4f6f8;
+      padding: 12px 16px;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .attr-container {
+        justify-content: center;
+      }
+      .attr-item {
+        flex: 1 1 45%;
+        max-width: 100%;
+      }
+      .attr-item img {
+        height: 220px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .attr-item {
+        flex: 1 1 100%;
+      }
+      .attr-item img {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Detailed Trip Suggestion</h1>
+  <div id="details"></div>
+
+  <div class="buttons">
+    <button class="btn" onclick="window.location.href='suggestions.html'">Back to Suggestions</button>
+    <button class="btn" onclick="window.location.href='code.html'">Home</button>
+  </div>
+
+  <script>
+    const suggestion = JSON.parse(localStorage.getItem("selectedSuggestion") || "{}");
+
+    if (!suggestion.route) {
+      document.getElementById("details").innerHTML = "<p>No details found.</p>";
+      throw new Error("No suggestion saved.");
+    }
+
+    const details = document.getElementById("details");
+    let html = "";
+
+    // Route and Stay Plan
+    html += `<div class="section"><h2>Route & Stay Plan</h2>`;
+    suggestion.route.forEach((city, idx) => {
+      html += `<strong>Stop ${idx + 1}:</strong> ${city} — ${suggestion.nights[idx] || 'Stay'}<br>`;
+    });
+    html += `</div>`;
+
+    // Itinerary
+    html += `<div class="section"><h2>Daily Itinerary</h2>`;
+    const plan = suggestion.daily_plan || [];
+    plan.forEach(day => {
+      html += `<h3>Day ${day.day}: ${day.city}</h3><ul>`;
+      day.activities.forEach(act => {
+        html += `<li>${act.time} — ${act.name}</li>`;
+      });
+      html += `</ul>`;
+    });
+    html += `</div>`;
+
+    // Fetch attraction images
+    fetch("http://localhost:5000/get_attraction_images", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ attractions: suggestion.attractions })
+    })
+    .then(res => res.json())
+    .then(data => {
+      const photos = data.images || {};
+
+      // Attractions Section
+      html += `<div class="section"><h2>Attractions & Estimated Stats</h2><div class="attr-container">`;
+      suggestion.attractions.forEach(attr => {
+        const img = photos[attr] 
+          ? `/Copy/static/IMG/attractions/${photos[attr]}` 
+          : `https://source.unsplash.com/600x400/?${encodeURIComponent(attr)}`;
+        html += `<div class="attr-item"><img src="${img}" alt="${attr}" /><div>${attr}</div></div>`;
+      });
+      html += `</div>`;
+      html += `<p><strong>Total Distance:</strong> ${suggestion.total_distance} km</p>`;
+      html += `<p><strong>Estimated Travel Time:</strong> ${suggestion.estimated_time}</p>`;
+      html += `<p><strong>Estimated Cost:</strong> ₹${suggestion.estimated_cost}</p>`;
+      html += `</div>`;
+
+      // Hotel Booking Section (Simplified Button)
+      const totalNights = suggestion.nights.length;
+      html += `<div class="section"><h2>Book Your Stay</h2>`;
+      html += `<a class="btn" style="margin-top:10px;" href="bookHotel.html?nights=${totalNights}">Book Hotel</a>`;
+      html += `</div>`;
+
+      // Feedback
+      html += `<div class="section"><h2>Traveler Feedback</h2><div class="feedback">`;
+      html += `<p>🌟🌟🌟🌟☆ – "Very smooth experience and perfect route planning!" – <em>Priya</em></p>`;
+      html += `<p>🌟🌟🌟🌟🌟 – "We loved the recommendations. The photos helped!" – <em>Ravi</em></p>`;
+      html += `<p>🌟🌟🌟☆☆ – "Some attractions were too far, but overall good." – <em>Divya</em></p>`;
+      html += `</div></div>`;
+
+      details.innerHTML = html;
+    })
+    .catch(err => {
+      console.error("Failed to load attraction images:", err);
+      alert("Could not load images. Please try again later.");
+    });
+  </script>
+</body>
+</html>

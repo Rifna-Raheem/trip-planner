@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="login_style.css ">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /*internal css for google and apple buttons*/
+      .btn-google {
+          background-color: #eae7e7; 
+          color: black;
+          border: none;
+          padding: 10px;
+          font-weight: 500;
+        }
+        
+        .btn-google:hover {
+          background-color: #bdbdbde0; 
+        }
+        
+        .btn-apple {
+          background-color: #eae7e7; 
+          color: black;
+          border: none;
+          padding: 10px;
+          font-weight: 500;
+        }
+        
+        .btn-apple:hover {
+          background-color: #bdbdbde0; 
+        }
+        .login-container {
+            padding: 25px;
+            max-width: 420px;
+            height: 90%;
+        }
+        body{
+    background-image: linear-gradient(rgba(171, 206, 231, 0.7),rgba(13, 27, 81, 0.7)),url('img/intro.jpg')  ;
+  }
+        </style>   
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Sign up-->
+    <div class="login-container" id="Sign up">
+        <h3 class="text-center">Sign up with</h3>
+        <div class="d-flex justify-content-between mb-3">
+          <button class="btn btn-google w-50 me-2 d-flex align-items-center justify-content-center"> <img src="https://logos-world.net/wp-content/uploads/2020/09/Google-Symbol.png" 
+            alt="Google Logo" style="width:35px; height:20px; margin-right:5px;">
+            Google</button>
+          <button class="btn btn-apple w-50 d-flex align-items-center justify-content-center"> <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" 
+            alt="Apple Logo" style="width:20px; height:20px; margin-right:10px;">
+            Apple</button>
+        </div>
+    
+        <div class="separator">or</div>
+    
+        <form action="register.php" method="POST" onsubmit="return validateForm()">
+          <div class="mb-2">
+            <label for="User" class="form-label">User name</label>
+            <input type="text" class="form-control" id="User name" name="User_name" placeholder="Enter your name" required>
+          </div>
+
+          <div class="mb-2">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          
+          <div class="mb-2">
+            <label for="Phone number" class="form-label">Phone number</label>
+            <input type="tel" class="form-control" id="Phone number" name="Phone_number" placeholder="Enter your phone number"  pattern="^[0-9]{10}$"
+              title="Phone number must be exactly 10 digits"required>
+          </div>
+
+          <div class="mb-2">
+            <label for="password" type="password" class="form-label" >Password</label>
+            <div class="input-box">
+            
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" pattern="^(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$"
+                title="Password must be at least 8 characters and include one symbol (!@#$%^&*)."required>
+                <img src="img/eye-close.jpg" alt="eye-close" id="eyeicon">
+              </div>
+            </div> 
+
+           
+    
+          
+    
+          <button type="submit" class="btn btn-primary w-100">Register</button>
+        </form>
+    
+        <div class="text-center mt-3">
+          <p>Already have an account? <a href="log in.html" class="text-decoration-none">Log in</a></p>
+        </div>
+      </div>
+
+      <!--script for eyeicon function-->
+      <script>
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("password");
+
+        eyeicon.onclick = function(){
+          if (password.type == "password") {
+            password.type = "text";
+            eyeicon.src = "img/eye-open.png";
+          }else {
+            password.type = "password";
+            eyeicon.src = "img/eye-close.jpg";
+          }
+        }
+
+      
+
+//script for form validation
+      
+  function validateForm() {
+    const phone = document.getElementById("Phone number").value;
+    const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value.trim();
+
+    // Phone number: must be 10 digits
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone)) {
+      alert("Phone number must be exactly 10 digits.");
+      return false;
+    }
+
+    // Password: at least 8 characters, includes a symbol
+    const passwordPattern = /^(?=.*[!@#$%^&])[A-Za-z\d!@#$%^&*]{8,}$/;
+    if (!passwordPattern.test(password)) {
+      alert("Password must be at least 8 characters long and include at least one symbol (!@#$%^&*).");
+      return false;
+    }
+
+     // Email validation pattern (basic but effective)
+     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+     if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      return false;
+    }
+    
+    //if all validations pass
+    return true;
+  }
+</script>
+      
+</body>
+</html>
