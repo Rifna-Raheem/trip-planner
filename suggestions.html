@@ -211,7 +211,7 @@ const nightList = (suggestion.nights && suggestion.nights.length > 0)
     const destination = encodeURIComponent(route[route.length - 1]);
     const waypoints = route.slice(1, -1).map(encodeURIComponent).join('|');
 
-    const apiKey = "AIzaSyDhOjrUtqpstQAMLsQ_l3-VAZpA_hs62SM"; // <-- Your API key here
+    const apiKey = "Your_API_key"; // <-- Your API key here
     const googleUrl = `https://www.google.com/maps/embed/v1/directions?key=${apiKey}&origin=${origin}&destination=${destination}${waypoints ? `&waypoints=${waypoints}` : ''}`;
 
     document.getElementById('map-frame').src = googleUrl;
