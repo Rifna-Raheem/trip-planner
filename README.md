@@ -59,26 +59,22 @@ This project was developed as a **team collaboration**.
 ```bash
 git clone https://github.com/Rifna-Raheem/trip-planner.git
 
-2. Backend Setup (PHP + MySQL)
+## 2. Backend Setup (PHP + MySQL)
+- Install **XAMPP**  
+- Place `trip_planner/` folder in **htdocs**  
+- Import `travel_planner.sql` into **phpMyAdmin**  
+- Update `db.php` with your MySQL credentials  
 
-Install XAMPP
+## 3. Stripe Setup
+- Add your **Stripe API keys** in:  
+  - `create_payment_intent.php`  
+  - `process_payment.php`  
 
-Place trip_planner/ folder in htdocs
+## 4. PHP Mail Setup
+- In `mail.php`, set your **password** and **recipient email address**  
 
-Import travel_planner.sql into phpMyAdmin
-
-Update db.php with your MySQL credentials
-
-3. Stripe Setup
-
-Add your Stripe API keys in create_payment_intent.php & process_payment.php
-
-4. PHP Mail Setup
-
-In mail.php, set your password and recipient email address
-
-5. Python AI Backend
-
+## 5. Python AI Backend
+```bash
 cd trip_planner/flask-backend
 pip install -r requirements.txt
 python app.py
