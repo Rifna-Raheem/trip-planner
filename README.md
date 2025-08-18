@@ -13,8 +13,8 @@ This project was developed as a **team collaboration**.
 ---
 
 ## 👥 Team Members
-- **[Rifna Raheem]**  
-- **[Bhagya Rajapaksha]**
+- **Rifna Raheem**  
+- **Bhagya Rajapaksha**
 
 ---
 
