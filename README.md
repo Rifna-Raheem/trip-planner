@@ -56,7 +56,7 @@ This project was developed as a **team collaboration**.
 
 ## ⚙️ Installation & Setup
 
-### 1. Clone the Repository
+## 1. Clone the Repository
 
 git clone https://github.com/Rifna-Raheem/trip-planner.git
 
@@ -75,15 +75,15 @@ git clone https://github.com/Rifna-Raheem/trip-planner.git
 - In `mail.php`, set your **password** and **recipient email address**  
 
 ## 5. Python AI Backend
-```bash
+
 cd trip_planner/flask-backend
 pip install -r requirements.txt
 python app.py
 
-6. Access Application
+## 6. Access Application
 Open: http://localhost/trip_planner/Home.html
 
-📂 Project Structure
+## 📂 Project Structure
 
 ---
 
@@ -109,7 +109,7 @@ trip_planner/
 
 ---
 
-📜 License
+## 📜 License
 
 This project is open-source under the MIT License.
 
