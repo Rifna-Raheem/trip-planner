@@ -55,11 +55,12 @@ This project was developed as a **team collaboration**.
 ---
 
 ## ⚙️ Installation & Setup
+
 ### 1. Clone the Repository
-```bash
+
 git clone https://github.com/Rifna-Raheem/trip-planner.git
 
-### 2. Backend Setup (PHP + MySQL)
+## 2. Backend Setup (PHP + MySQL)
 - Install **XAMPP**  
 - Place `trip_planner/` folder in **htdocs**  
 - Import `travel_planner.sql` into **phpMyAdmin**  
