@@ -12,12 +12,6 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
 -- Database: `travel_planner`
 --
 
@@ -82,55 +76,6 @@ CREATE TABLE `bookings` (
 
 --
 -- Dumping data for table `bookings`
---
-
-INSERT INTO `bookings` (`booking_id`, `hotel_id`, `checkin`, `checkout`, `num_guests`, `total_price`, `booking_date`, `email`, `booking_status`, `payment_status`) VALUES
-(27, 1, '2025-07-25', '2025-07-26', 3, 220.00, '2025-07-24 18:50:21', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(28, 11, '2025-07-25', '2025-07-26', 3, 250.00, '2025-07-24 20:33:46', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(29, 11, '2025-07-25', '2025-07-26', 3, 250.00, '2025-07-24 20:50:28', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(30, 12, '2025-07-25', '2025-07-26', 3, 235.00, '2025-07-24 21:05:40', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(31, 2, '2025-07-25', '2025-07-27', 3, 480.00, '2025-07-25 04:00:04', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(32, 13, '2025-07-25', '2025-07-27', 2, 290.00, '2025-07-25 16:34:26', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(33, 14, '2025-07-25', '2025-07-27', 2, 340.00, '2025-07-25 18:27:27', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(34, 14, '2025-07-25', '2025-07-27', 2, 340.00, '2025-07-25 18:38:50', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(35, 24, '2025-07-26', '2025-07-27', 3, 210.00, '2025-07-25 19:33:57', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(36, 15, '2025-07-26', '2025-07-27', 3, 225.00, '2025-07-25 20:22:21', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(37, 21, '2025-07-26', '2025-07-27', 3, 240.00, '2025-07-26 09:21:29', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(38, 21, '2025-07-26', '2025-07-27', 3, 240.00, '2025-07-26 15:03:11', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(39, 22, '2025-07-26', '2025-07-27', 3, 230.00, '2025-07-26 15:05:11', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(40, 22, '2025-07-26', '2025-07-27', 3, 230.00, '2025-07-26 15:05:26', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(41, 23, '2025-07-26', '2025-07-27', 3, 245.00, '2025-07-26 15:06:09', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(42, 23, '2025-07-26', '2025-07-27', 3, 245.00, '2025-07-26 16:22:53', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(43, 23, '2025-07-26', '2025-07-27', 3, 245.00, '2025-07-26 16:24:12', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(44, 23, '2025-07-26', '2025-07-27', 3, 245.00, '2025-07-26 16:34:32', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(45, 23, '2025-07-26', '2025-07-27', 3, 245.00, '2025-07-26 16:35:43', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(46, 23, '2025-07-26', '2025-07-27', 3, 245.00, '2025-07-26 16:35:46', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(47, 25, '2025-07-26', '2025-07-27', 3, 225.00, '2025-07-26 16:46:09', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(48, 27, '2025-07-26', '2025-07-27', 3, 200.00, '2025-07-26 16:57:37', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(49, 29, '2025-07-26', '2025-07-27', 3, 228.00, '2025-07-26 17:23:03', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(50, 18, '2025-07-26', '2025-07-29', 3, 660.00, '2025-07-26 18:07:45', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(51, 19, '2025-07-27', '2025-07-28', 3, 240.00, '2025-07-26 19:17:08', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(52, 51, '2025-07-27', '2025-07-28', 2, 120.00, '2025-07-27 06:07:45', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(53, 52, '2025-07-27', '2025-07-28', 3, 210.00, '2025-07-27 10:25:44', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(54, 53, '2025-07-27', '2025-07-28', 2, 125.00, '2025-07-27 15:50:15', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(55, 54, '2025-07-28', '2025-07-29', 3, 215.00, '2025-07-27 19:10:11', 'rifna06@gmail.com', 'cancelled', 'not required'),
-(56, 55, '2025-07-28', '2025-07-29', 3, 200.00, '2025-07-27 19:12:59', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(57, 56, '2025-07-28', '2025-07-29', 3, 220.00, '2025-07-27 19:26:56', 'rifna06@gmail.com', 'confirmed', 'pending'),
-(58, 11, '2025-07-28', '2025-07-29', 3, 250.00, '2025-07-28 10:56:04', 'abdulraheemrifna06@gmail.com', 'cancelled', 'Refund_requested'),
-(59, 12, '2025-07-28', '2025-07-29', 3, 235.00, '2025-07-28 10:58:13', 'abdulraheemrifna06@gmail.com', 'cancelled', 'not required'),
-(60, 13, '2025-07-28', '2025-07-29', 3, 245.00, '2025-07-28 14:38:04', 'abdulraheemrifna06@gmail.com', 'cancelled', 'not required'),
-(61, 14, '2025-07-28', '2025-07-29', 3, 270.00, '2025-07-28 14:42:29', 'abdulraheemrifna06@gmail.com', 'cancelled', 'Refund_requested'),
-(66, 31, '2025-07-28', '2025-07-29', 3, 245.00, '2025-07-28 17:54:07', 'abdulraheemrifna06@gmail.com', 'cancelled', 'Refund_requested'),
-(68, 1, '2025-07-29', '2025-07-30', 2, 120.00, '2025-07-29 15:08:52', 'abdulraheemrifna06@gmail.com', 'cancelled', 'Refund_requested'),
-(69, 22, '2025-07-29', '2025-07-30', 2, 130.00, '2025-07-29 15:17:02', 'abdulraheemrifna06@gmail.com', 'cancelled', 'Refund_requested'),
-(70, 51, '2025-07-29', '2025-07-30', 2, 120.00, '2025-07-29 15:36:25', 'abdulraheemrifna06@gmail.com', 'confirmed', 'paid'),
-(71, 52, '2025-07-29', '2025-07-30', 2, 110.00, '2025-07-29 16:35:36', 'abdulraheemrifna06@gmail.com', 'confirmed', 'paid'),
-(72, 52, '2025-07-29', '2025-07-30', 2, 110.00, '2025-07-29 16:37:10', 'abdulraheemrifna06@gmail.com', 'confirmed', 'pending'),
-(73, 53, '2025-07-29', '2025-07-30', 2, 125.00, '2025-07-29 16:44:23', 'abdulraheemrifna06@gmail.com', 'confirmed', 'pending'),
-(74, 57, '2025-07-29', '2025-07-30', 2, 105.00, '2025-07-29 16:45:02', 'abdulraheemrifna06@gmail.com', 'confirmed', 'pending'),
-(75, 13, '2025-08-14', '2025-08-15', 2, 145.00, '2025-08-05 06:17:20', 'nazeehazainab5@gmail.com', 'cancelled', 'Refund_requested'),
-(76, 14, '2025-08-05', '2025-08-06', 2, 170.00, '2025-08-05 06:27:37', 'raheem@gmail.com', 'cancelled', 'Refund_requested'),
-(77, 16, '2025-08-05', '2025-08-06', 2, 110.00, '2025-08-05 17:31:22', 'raheem@gmail.com', 'cancelled', 'Refund_requested');
 
 -- --------------------------------------------------------
 
@@ -242,28 +187,6 @@ CREATE TABLE `payments` (
 
 --
 -- Dumping data for table `payments`
---
-
-INSERT INTO `payments` (`id`, `booking_id`, `hotel_id`, `user_email`, `payer_name`, `amount`, `currency`, `card_last4`, `card_brand`, `card_exp_month`, `card_exp_year`, `payment_intent_id`, `transaction_id`, `status`, `created_at`) VALUES
-(1, 53, 52, 'rifna06@gmail.com', 'shopia', 210.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-27 12:33:30'),
-(2, 53, 52, 'rifna06@gmail.com', 'milan', 210.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-27 12:35:39'),
-(3, 54, 53, 'rifna06@gmail.com', 'hbnjhbk', 125.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-27 18:05:59'),
-(4, 54, 53, 'rifna06@gmail.com', 'hbnjhbk', 125.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-27 18:07:11'),
-(5, 54, 53, 'rifna06@gmail.com', 'hbnjhbk', 125.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-27 18:07:40'),
-(6, 54, 53, 'rifna06@gmail.com', 'milan', 125.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-27 18:27:35'),
-(7, 54, 53, 'rifna06@gmail.com', 'shopia', 125.00, 'USD', '4242', 'visa', '3', '2030', '0', '0', 'succeeded', '2025-07-27 18:29:19'),
-(8, 55, 54, 'rifna06@gmail.com', 'shopia', 215.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-27 19:10:37'),
-(9, 57, 56, 'rifna06@gmail.com', 'milan', 220.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-27 19:27:14'),
-(17, 58, 11, 'abdulraheemrifna06@gmail.com', 'mickel', 250.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-29 05:44:48'),
-(18, 66, 31, 'abdulraheemrifna06@gmail.com', 'milan', 245.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-29 05:50:54'),
-(19, 61, 14, 'abdulraheemrifna06@gmail.com', 'shopia', 270.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-29 07:06:30'),
-(20, 68, 1, 'abdulraheemrifna06@gmail.com', 'milan', 120.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-29 15:09:09'),
-(21, 69, 22, 'abdulraheemrifna06@gmail.com', 'milan', 130.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'refund requested', '2025-07-29 15:17:20'),
-(22, 70, 51, 'abdulraheemrifna06@gmail.com', 'hbnjhbk', 120.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-29 16:08:44'),
-(23, 71, 52, 'abdulraheemrifna06@gmail.com', 'milan', 110.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'succeeded', '2025-07-29 16:46:31'),
-(24, 75, 13, 'nazeehazainab5@gmail.com', 'nazeeha', 145.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'refund requested', '2025-08-05 06:18:19'),
-(25, 76, 14, 'raheem@gmail.com', 'rifna', 170.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'refund requested', '2025-08-05 06:28:05'),
-(26, 77, 16, 'raheem@gmail.com', 'shopia', 110.00, 'USD', '4242', 'visa', '9', '2032', '0', '0', 'refund requested', '2025-08-05 17:32:28');
 
 --
 -- Triggers `payments`
@@ -300,21 +223,6 @@ CREATE TABLE `personal_details` (
 
 --
 -- Dumping data for table `personal_details`
---
-
-INSERT INTO `personal_details` (`id`, `email`, `name`, `dob`, `gender`, `travel_style`, `address`, `travel_interests`, `created_at`, `updated_at`) VALUES
-(1, NULL, 'rifna', '2018-06-06', 'Female', 'luxury', 'kalmunai', 'food', '2025-07-15 09:47:53', '2025-07-15 09:47:53'),
-(9, NULL, 'rifna', '2018-06-06', 'Female', 'adventure', 'kalmunai', NULL, '2025-07-15 10:40:33', '2025-07-15 10:40:33'),
-(10, NULL, 'rifna', '2018-06-06', 'Female', 'adventure', 'kalmunai', NULL, '2025-07-15 10:40:47', '2025-07-15 10:40:47'),
-(11, NULL, 'rifna', '2025-07-16', 'Male', 'budget', 'scacescfsdadwq', NULL, '2025-07-15 19:19:12', '2025-07-15 19:19:12'),
-(12, NULL, 'rifna', '2025-07-16', 'Male', 'budget', 'scacescfsdadwq', 'wildlife', '2025-07-15 19:25:44', '2025-07-15 19:25:44'),
-(13, NULL, 'rifna', '2025-07-16', 'Male', 'budget', 'scacescfsdadwq', 'wildlife', '2025-07-15 19:26:21', '2025-07-15 19:26:21'),
-(14, NULL, 'rifna', '2025-07-16', 'Male', 'budget', 'scacescfsdadwq', 'food', '2025-07-15 19:26:49', '2025-07-15 19:26:49'),
-(15, NULL, 'rifna', '2025-07-25', 'Other', 'relaxation', 'kalmunai', 'history, wildlife, shopping', '2025-07-15 19:32:26', '2025-07-15 19:32:26'),
-(20, 'rifna06@gmail.com', 'Rifna Abdul Raheem', '2025-07-09', 'Female', 'luxury', 'kalmunai', 'history, wildlife, beaches, food', '2025-07-26 18:24:30', '2025-08-03 11:03:03'),
-(21, 'rifna07@gmail.com', 'Rifna Abdul Raheem', '2025-07-28', 'Female', 'budget', 'kalmunai', 'wildlife', '2025-07-28 09:55:20', '2025-07-28 10:14:53'),
-(25, 'abdulraheemrifna06@gmail.com', 'Rifna Abdul Raheem', '2025-07-28', 'Male', 'budget', 'kalmunai', 'wildlife, beaches', '2025-07-28 15:56:36', '2025-07-29 06:23:36'),
-(26, 'raheem@gmail.com', 'Rifna Abdul Raheem', '2022-02-08', 'Male', 'budget', 'ygutyk', 'history, beaches, food', '2025-08-05 17:21:06', '2025-08-05 17:21:24');
 
 -- --------------------------------------------------------
 
@@ -331,15 +239,7 @@ CREATE TABLE `register` (
 
 --
 -- Dumping data for table `register`
---
 
-INSERT INTO `register` (`User_name`, `email`, `Phone_number`, `password`) VALUES
-('susanne', 'abdulraheemrifna06@gmail.com', '1234567890', '123456321&'),
-('raheem', 'fytytuyty@123gmail.com', '1238529462', '1234hHY%'),
-('Nazeeha', 'nazeehazainab5@gmail.com', '0777123456', 'Nazeeha@5'),
-('susanne', 'raheem@gmail.com', '0775689632', 'raheem09&'),
-('nuskiya', 'rifna06@gmail.com', '6565654545', '12456789%'),
-('nuskiya', 'rifna07@gmail.com', '6565654546', '12456789%');
 
 --
 -- Indexes for dumped tables
