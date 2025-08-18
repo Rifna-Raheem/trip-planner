@@ -110,7 +110,7 @@
             $mail->Host = 'smtp.gmail.com';  
             $mail->SMTPAuth = true;                               
             $mail->Username = 'abdulraheemrifna06@gmail.com';                 
-            $mail->Password = 'hvvx losx wjtt ruyw';                           
+            $mail->Password = "Enter_your_password";                           
             $mail->SMTPSecure = 'tls';                            
             $mail->Port = 587;                                    
 
