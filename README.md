@@ -57,9 +57,9 @@ This project was developed as a **team collaboration**.
 ## ⚙️ Installation & Setup
 1. **Clone the Repository**
 ```bash
-git clone https://github.com/YOUR_USERNAME/trip-planner.git
+git clone https://github.com/Rifna-Raheem/trip-planner.git
 
-Backend Setup (PHP + MySQL)
+2. Backend Setup (PHP + MySQL)
 
 Install XAMPP
 
@@ -69,23 +69,27 @@ Import travel_planner.sql into phpMyAdmin
 
 Update db.php with your MySQL credentials
 
-Stripe Setup
+3. Stripe Setup
 
 Add your Stripe API keys in create_payment_intent.php & process_payment.php
 
-PHP Mail Setup
+4. PHP Mail Setup
 
-In mail.php, set your recipient email address
+In mail.php, set your password and recipient email address
 
-Python AI Backend
+5. Python AI Backend
 
 cd trip_planner/flask-backend
 pip install -r requirements.txt
 python app.py
 
-Access Application
+6. Access Application
 Open: http://localhost/trip_planner/Home.html
+
 📂 Project Structure
+
+---
+
 trip_planner/
 │── flask-backend/       # Flask server + AI optimization
 │── img/                 # Images
@@ -94,23 +98,21 @@ trip_planner/
 │── *.css                # Stylesheets
 │── travel_planner.sql   # Database schema
 
-📷 Screenshots
+## 📷 Screenshots
 
-(Add screenshots if available)
+### 🏠 Home Page
+![Home Page](screenshots/home.png)
+
+### 📅 Trip Planner
+![Trip Planner](screenshots/booking.png)
+
+### 💳 Payment Page
+![Payment Page](screenshots/payment.png)
+
+
+---
 
 📜 License
 
 This project is open-source under the MIT License.
 
-<<<<<<< HEAD
-=======
-
----
-
-## **3️⃣ Collaboration: How to Show Your Team**
-- ✅ **GitHub README:** The **Team Members** section is the formal way (you don’t need to do more, recruiters check README).  
-- ✅ **GitHub Repo "About" Section:** Just add a short description of the project (not required to list teammates here).  
-- ✅ **LinkedIn Post:** LinkedIn lets you “Add collaborators.” You can **tag your teammate** so it appears for both of you. That’s the best and most professional approach.  
-
-
->>>>>>> 1f6fdcd (Apply .gitignore and clean up tracked files)
