@@ -109,6 +109,8 @@ trip_planner/
  💳 Payment Page
 ![Payment Page](screenshots/payment.png)
 
+## 🙏 Acknowledgments
+We would like to express our sincere gratitude to our supervisor **MR. Mohamed Mufassirin (Lecturer at South Eastern University of Sri Lanka)** for guidance, support, and encouragement throughout the development of this project.
 
 ---
 
