@@ -98,13 +98,13 @@ trip_planner/
 
 ## 📷 Screenshots
 
-## 🏠 Home Page
+ 🏠 Home Page
 ![Home Page](screenshots/home.png)
 
-## 📅 Trip Planner
+ 📅 Trip Planner
 ![Trip Planner](screenshots/booking.png)
 
-## 💳 Payment Page
+ 💳 Payment Page
 ![Payment Page](screenshots/payment.png)
 
 
