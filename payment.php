@@ -92,7 +92,7 @@ $user_email = $_SESSION['email'] ?? '';
 
 <script src="https://js.stripe.com/v3/"></script>
 <script>
-  const stripe = Stripe("pk_test_51Rp2swF46FsybOou6eVcM2FUZzrVTio8pjrKN1tlk8QEXrAP8MUtBOFAdSPNg28iMb4RLHXk9icFzgCJAqOEBFLl00CVyWrlA6");//enter your API private key
+  const stripe = Stripe("Your_stripe_private_key");//enter your API private key
   const elements = stripe.elements();
 
   const cardNumber = elements.create('cardNumber', { style: { base: { fontSize: '16px' } } });
