@@ -76,9 +76,9 @@ git clone https://github.com/Rifna-Raheem/trip-planner.git
 
 ## 5. Python AI Backend
 
-cd trip_planner/flask-backend
-pip install -r requirements.txt
-python app.py
+- cd trip_planner/flask-backend
+- pip install -r requirements.txt
+- python app.py
 
 ## 6. Access Application
 Open: http://localhost/trip_planner/Home.html
