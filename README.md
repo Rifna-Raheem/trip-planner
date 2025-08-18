@@ -86,7 +86,7 @@ Open: http://localhost/trip_planner/Home.html
 
 ## 📂 Project Structure
 
-
+```
 trip_planner/
 │── flask-backend/       # Flask server + AI optimization
 │── img/                 # Images
@@ -94,7 +94,7 @@ trip_planner/
 │── *.html               # Frontend pages
 │── *.css                # Stylesheets
 │── travel_planner.sql   # Database schema
-
+```
 
 ## 📷 Screenshots
 
