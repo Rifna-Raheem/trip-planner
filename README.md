@@ -102,3 +102,15 @@ trip_planner/
 
 This project is open-source under the MIT License.
 
+<<<<<<< HEAD
+=======
+
+---
+
+## **3️⃣ Collaboration: How to Show Your Team**
+- ✅ **GitHub README:** The **Team Members** section is the formal way (you don’t need to do more, recruiters check README).  
+- ✅ **GitHub Repo "About" Section:** Just add a short description of the project (not required to list teammates here).  
+- ✅ **LinkedIn Post:** LinkedIn lets you “Add collaborators.” You can **tag your teammate** so it appears for both of you. That’s the best and most professional approach.  
+
+
+>>>>>>> 1f6fdcd (Apply .gitignore and clean up tracked files)

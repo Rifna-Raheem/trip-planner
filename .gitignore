@@ -1,0 +1,15 @@
+# Dependency folders
+/vendor/
+/node_modules/
+
+# Environment & secrets
+.env
+
+# Logs & cache
+*.log
+*.cache
+*.tmp
+
+# System files
+.DS_Store
+Thumbs.db
