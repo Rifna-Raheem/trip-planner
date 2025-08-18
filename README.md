@@ -83,8 +83,10 @@ git clone https://github.com/Rifna-Raheem/trip-planner.git
 ## 6. Access Application
 Open: http://localhost/trip_planner/Home.html
 
+```markdown
 ## 📂 Project Structure
 
+```text
 trip_planner/
 │── flask-backend/       # Flask server + AI optimization
 │── img/                 # Images
@@ -93,6 +95,7 @@ trip_planner/
 │── *.css                # Stylesheets
 │── travel_planner.sql   # Database schema
 
+```markdown
 ## 📷 Screenshots
 
 ### 🏠 Home Page
