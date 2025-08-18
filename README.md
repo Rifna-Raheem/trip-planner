@@ -55,7 +55,7 @@ This project was developed as a **team collaboration**.
 ---
 
 ## ⚙️ Installation & Setup
-## 1. Clone the Repository
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/Rifna-Raheem/trip-planner.git
 
