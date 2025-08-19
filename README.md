@@ -101,7 +101,7 @@ trip_planner/
 ## 📷 Screenshots
 
  🏠 Home Page
-![Home Page](screenshots/home.png)
+![Home Page](home.png)
 
  📅 Trip Planner
 ![Trip Planner](screenshots/suggestions.png)
