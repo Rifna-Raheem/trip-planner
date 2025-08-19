@@ -104,7 +104,7 @@ trip_planner/
 ![Home Page](screenshots/home.png)
 
  📅 Trip Planner
-![Trip Planner](screenshots/booking.png)
+![Trip Planner](screenshots/suggestions.png)
 
  💳 Payment Page
 ![Payment Page](screenshots/payment.png)
