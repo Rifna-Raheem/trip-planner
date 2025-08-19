@@ -104,10 +104,10 @@ trip_planner/
 ![Home Page](home.png)
 
  📅 Trip Planner
-![Trip Planner](screenshots/suggestions.png)
+![Trip Planner](suggestions.png)
 
  💳 Payment Page
-![Payment Page](screenshots/payment.png)
+![Payment Page](payment.png)
 
 ## 🙏 Acknowledgments
 We would like to express our sincere gratitude to our supervisor **MR. Mohamed Mufassirin (Lecturer at South Eastern University of Sri Lanka)** for guidance, support, and encouragement throughout the development of this project.
